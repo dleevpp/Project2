@@ -29,7 +29,7 @@ int main(){
 
 //파일 1의 정보를 가져오는 함수 작성
 void filestat1(){
-    char* File1 = "the_File1";
+    char* File1 = "text1";
 	if (stat(File1, &stat1)<0)
 	{
 		puts("File name %s does not exist\n", File1);
@@ -39,7 +39,7 @@ void filestat1(){
 
 //파일 2의 정보를 가져오는 함수 작성
 void filestat2(){
-    char* File2 = "the_File2";
+    char* File2 = "text2";
 	if (stat(File2, &stat2)<0)
 	{
 		puts("File name %s does not exist\n", File2);
