@@ -69,15 +69,35 @@ void sizecmp(){
 
 //두 개의 파일 블락 수를 비교하는 함수 작성
 void blockcmp(){
+    printf("size compare\n");
     
+    if      (stat1.st_blocks > stat2.st_blocks) printf("text1 is bigger\n\n");
+    else if (stat1.st_blocks < stat2.st_blocks) printf("text2 is bigger\n\n");
+    else                                        printf("sizes are equal\n\n");
 }
 
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
 void datecmp(){
-    
+    printf("date compare\n");
+
+    // 달 먼저 비교
+    if      (time1->tm_mon < time2->tm_mon)     printf("text1 is early\n\n");
+    else if (time1->tm_mon > time2->tm_mon)     printf("text2 is early\n\n");
+    // 날짜 비교
+    else if (time1->tm_mday < time2->tm_mday)   printf("text1 is early\n\n");
+    else if (time1->tm_mday > time2->tm_mday)   printf("text2 is early\n\n");
+    else                                        printf("same date\n\n");
 }
 
 //두 개의 파일 수정 시간을 비교하는 함수 작성
 void timecmp(){
-    
+    printf("time compare\n");
+
+    // 시간 먼저 비교
+    if      (time1->tm_hour < time2->tm_hour)   printf("text1 is early\n");
+    else if (time1->tm_hour > time2->tm_hour)   printf("text2 is early\n");
+    // 분 비교
+    else if (time1->tm_min < time2->tm_min)     printf("text1 is early\n");
+    else if (time1->tm_min > time2->tm_min)     printf("text2 is early\n");
+    else                                        printf("same date\n");
 }
