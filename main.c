@@ -33,7 +33,6 @@ void filestat1(){
 	if (stat(File1, &stat1)<0)
 	{
 		printf("File name %s does not exist\n", File1);
-		exit(0);
 	}
 }
 
@@ -43,13 +42,12 @@ void filestat2(){
 	if (stat(File2, &stat2)<0)
 	{
 		printf("File name %s does not exist\n", File2);
-		exit(0);
 	}
 }
 
 //파일 1의 시간 정보를 가져오는 함수 작성
 void filetime1(){
-    
+   
 }
 
 //파일 2의 시간 정보를 가져오는 함수 작성
@@ -59,7 +57,13 @@ void filetime2(){
 
 //두 개의 파일 크기를 비교하는 함수 작성
 void sizecmp(){
-    
+    puts("size compare");
+    if (stat1.st_size > stat2.st_size)
+        puts("text1 is bigger\n");
+    else if (stat1.st_size < stat2.st_size)
+        puts("text2 is bigger\n");
+    else
+        puts("sizes are equal\n");
 }
 
 //두 개의 파일 블락 수를 비교하는 함수 작성
