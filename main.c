@@ -32,7 +32,7 @@ void filestat1(){
     char* File1 = "text1";
 	if (stat(File1, &stat1)<0)
 	{
-		puts("File name %s does not exist\n", File1);
+		printf("File name %s does not exist\n", File1);
 		exit(0);
 	}
 }
@@ -42,7 +42,7 @@ void filestat2(){
     char* File2 = "text2";
 	if (stat(File2, &stat2)<0)
 	{
-		puts("File name %s does not exist\n", File2);
+		printf("File name %s does not exist\n", File2);
 		exit(0);
 	}
 }
