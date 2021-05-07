@@ -51,7 +51,7 @@ void filestat2(){
 void filetime1(){
     time1 = localtime(&stat1.st_mtime);
 	if(time1==null){
-		printf("time1 is null");
+		printf("time1 is null\n");
 		_exit(0);
 	}	
 }
@@ -60,7 +60,7 @@ void filetime1(){
 void filetime2(){
 	time2 = localtime(&stat2.st_mtime);
     if(time2==null){
-	    printf("time2 is null");
+	    printf("time2 is null\n");
 	    _exit(0);
     }
 }
